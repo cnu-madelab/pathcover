@@ -13,8 +13,6 @@ from pathcover.utils import make_final_adj_scipy as make_final_adj, filter_overl
 def build_overlay(method, nodelist=None):
     """
     return: overlay_adj, keep_weight_dict
-    - use_stochastic_filter=True  → edge 삭제 없이 keep_weight만 계산
-    - False                       → τ 임계 이하 edge 삭제
     """
     d = cover.adj_overlay(adj, args.k, add_local_edge=False,
                           method=method, ret_mode=args.ret,
